@@ -9,7 +9,7 @@ export default function About() {
       <Typography id="sectionHeader" variant="h3" sx={{ fontWeight: 800, mb: 3 }}>
         About
       </Typography>
-    <Typography sx={{ color: 'white', fontSize: { xs: 16, sm: 19 } }}>
+    <Typography sx={{ color: 'white', fontSize: { xs: 16, sm: 20 } }}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolore dolorum, excepturi reiciendis accusantium, maiores id quaerat quas amet modi et eveniet explicabo dignissimos corporis corrupti quisquam quod ea tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius culpa vero fugiat ipsum quaerat ducimus reiciendis tenetur perferendis quam incidunt earum expedita, assumenda soluta ab quasi fuga eaque voluptatum illum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eveniet maiores quia quas dolore tempora, ab itaque optio dolor? Ipsum ex numquam itaque, incidunt eos delectus distinctio neque aperiam harum.
         </Typography>
     </Box>

@@ -116,6 +116,7 @@ export default function Navbarmui() {
             <IconButton aria-label="toggle theme" color="inherit">
               <DarkModeIcon />
             </IconButton>
+            
           </Box>
         </Toolbar>
       </Container>
