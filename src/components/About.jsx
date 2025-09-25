@@ -4,8 +4,8 @@ import Container from '@mui/material/Container';
 
 export default function About() {
   return (
-    <Container maxWidth="lg">
-    <Box sx={{ py: 6 }}>
+    <Container  maxWidth="lg">
+    <Box id='about-section' sx={{ py: 6 }}  >
       <Typography id="sectionHeader" variant="h3" sx={{ fontWeight: 800, mb: 3 }}>
         About
       </Typography>

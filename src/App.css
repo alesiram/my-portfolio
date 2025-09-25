@@ -38,3 +38,8 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 
 }
+
+html { scroll-behavior: smooth; }
+/* Adjust this to AppBar height */
+section { scroll-margin-top: 88px; }
+main { max-width: 1200px; margin: 0 auto; padding: 24px; }
