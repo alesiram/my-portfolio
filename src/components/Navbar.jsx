@@ -11,10 +11,11 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import ThemeButton from '../theme/ThemeButton';
 
 const pages = ['About', 'Projects', 'Contact'];
 
-export default function Navbarmui() {
+export default function Navbarmui( {mode, setMode}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (e) => setAnchorElNav(e.currentTarget);
@@ -113,10 +114,10 @@ export default function Navbarmui() {
                 {page}
               </Button>
             ))}
-            <IconButton aria-label="toggle theme" color="inherit">
-              <DarkModeIcon />
-            </IconButton>
-            
+          
+              <ThemeButton setMode={setMode} mode={mode} />
+   
+
           </Box>
         </Toolbar>
       </Container>
