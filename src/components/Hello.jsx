@@ -6,6 +6,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Container from '@mui/material/Container';
 import BlinkingBar from './BlinkingBar';
+import Button from '@mui/material/Button';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function Hello() {
   return (
@@ -28,7 +30,7 @@ export default function Hello() {
             },
           }}
         >
-          {/* TEXT */}
+          {/* Left side TEXT */}
           <Box sx={{ gridArea: 'text' }}>
             <Box
               sx={{
@@ -43,7 +45,7 @@ export default function Hello() {
                 variant="h2"
                 sx={{
                   fontWeight: 800,
-                  fontSize: { xs: '2.2rem', sm: '3rem' },
+                  fontSize: { xs: '2.2rem', sm: '4rem' },
                   lineHeight: 1.15,
                   color: 'white',
                 }}
@@ -54,7 +56,7 @@ export default function Hello() {
               <Typography
                 variant="h2"
                 sx={{
-                  fontSize: { xs: '2.2rem', sm: '3rem' },
+                  fontSize: { xs: '2.2rem', sm: '4rem' },
                   fontWeight: 800,
                   color: 'white',
                   display: 'inline-flex',
@@ -71,13 +73,10 @@ export default function Hello() {
                   fontSize: { xs: 16, sm: 20 },
                 }}
               >
-                Full-stack developer student. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Asperiores quis perspiciatis
-                voluptas atque ea corrupti dicta qui distinctio deleniti
-                quisquam, harum assumenda officiis, dolorem eligendi ut maxime
-                possimus ullam aperiam?
+                Full-Stack Developer Student
               </Typography>
 
+                {/* Clickable links */}
               <Stack
                 direction="row"
                 spacing={2}
@@ -102,10 +101,16 @@ export default function Hello() {
                   <LinkedInIcon sx={{ fontSize: 48, color: 'white' }} />
                 </IconButton>
               </Stack>
+               <Box sx={{ '& button': { m: 1 } }}>
+                   <Button  variant="contained" color='success' endIcon={<DownloadIcon />}>
+                   Download Resume
+                </Button>
+                </Box>
+               
             </Box>
           </Box>
 
-          {/* IMAGE */}
+          {/* Right Side: IMAGE */}
           <Box
             sx={{
               gridArea: 'image',
