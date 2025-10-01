@@ -11,7 +11,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 export default function Hello() {
   return (
-    <Container maxWidth="lg">
+
       <Box sx={{ py: { xs: 6, md: 10 } }}>
         {/* GRID LAYOUT */}
         <Box
@@ -42,7 +42,7 @@ export default function Hello() {
               }}
             >
               <Typography
-                variant="h2"
+                variant="h1"
                 sx={{
                   fontWeight: 800,
                   fontSize: { xs: '2.2rem', sm: '4rem' },
@@ -54,7 +54,7 @@ export default function Hello() {
               </Typography>
 
               <Typography
-                variant="h2"
+                variant="h1"
                 sx={{
                   fontSize: { xs: '2.2rem', sm: '4rem' },
                   fontWeight: 800,
@@ -145,6 +145,6 @@ export default function Hello() {
           </Box>
         </Box>
       </Box>
-    </Container>
+
   );
 }

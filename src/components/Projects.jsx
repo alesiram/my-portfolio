@@ -6,15 +6,16 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import CardActionArea from '@mui/material/CardActionArea';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-
+import { alpha } from '@mui/material/styles';
 import projectData from './ProjectData.js';
 
 export default function Projects(){
+  
     return (
-      <Box sx={{ py: 6 }}>
+
+      <Box sx={{ py: 8 }}>
       <Typography id="sectionHeader" variant="h3" sx={{ fontWeight: 800, mb: 3 }}>
         Projects
       </Typography>
@@ -26,19 +27,36 @@ export default function Projects(){
           {projectData.map((project) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={project.id}>
               <Card
-                sx={{
-                  maxWidth: 345,
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
+              sx={(theme) => ({
+                maxWidth: 365,
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                borderRadius: 4,
+                
+                // Theme-aware surface
+                backgroundColor: alpha(theme.palette.background.paper, 0.95),
+                border: `1px solid ${alpha(theme.palette.divider, 0.6)}`,
+
+              // Hover
+                transition: 'transform .3s, box-shadow .3s, border-color .3s',
+              '&:hover': {
+                transform: 'translateY(-6px)',
+                boxShadow: 6,
+                borderColor: alpha(theme.palette.primary.main, 0.35),
+              },
+              })}
               >
-                <CardActionArea href={project.link} target="_blank">
+                <CardContent >
                   <CardMedia
                     component="img"
                     height="200"
                     image={project.image}
                     alt={project.title}
+                    sx={{
+                      objectFit: "cover"
+                      }}
+                  
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
@@ -48,7 +66,7 @@ export default function Projects(){
                       {project.description}
                     </Typography>
                   </CardContent>
-                </CardActionArea>
+                </CardContent>
                 <Box sx={{ p: 1, mt: 'auto' }}>
                   <Button size="small" href={project.link} target="_blank">
                     See Project
@@ -60,5 +78,6 @@ export default function Projects(){
         </Grid>
       </Box>
       </Box>
+      
     )
 }
