@@ -1,3 +1,4 @@
+import React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -7,6 +8,29 @@ import Button from "@mui/material/Button";
 import { alpha } from '@mui/material/styles';
 
 export default function Contact() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const contactData = new FormData(event.target)
+
+    contactData.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY);
+
+    const object = Object.fromEntries(contactData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
   return (
     <Box id="contact-section" sx={{ py: 8 }}>
       <Typography
@@ -47,6 +71,7 @@ export default function Contact() {
             component="form"
             noValidate
             autoComplete="off"
+            onSubmit={onSubmit}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -56,6 +81,7 @@ export default function Contact() {
             <TextField
               required
               label="Name"
+              name="name"
               variant="outlined"
               fullWidth
             />
@@ -63,11 +89,13 @@ export default function Contact() {
               required
               label="Email"
               type="email"
+              name="email"
               variant="outlined"
               fullWidth
             />
             <TextField
-              label="Message"
+              label="Your Message"
+              name="message"
               multiline
               rows={4}
               variant="outlined"
@@ -78,9 +106,9 @@ export default function Contact() {
               variant="contained"
               color="primary"
               type="submit"
-              sx={{ alignSelf: "flex-start" }}
+              sx={{ alignSelf: "center" }}
             >
-              Send
+              Send Message
             </Button>
           </Box>
         </CardContent>

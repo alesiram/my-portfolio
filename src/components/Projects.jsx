@@ -36,7 +36,7 @@ export default function Projects(){
                 
                 // Theme-aware surface
                 backgroundColor: alpha(theme.palette.background.paper, 0.95),
-                border: `1px solid ${alpha(theme.palette.divider, 0.6)}`,
+                border: `1px solid ${alpha(theme.palette.divider, 0.95)}`,
 
               // Hover
                 transition: 'transform .3s, box-shadow .3s, border-color .3s',
