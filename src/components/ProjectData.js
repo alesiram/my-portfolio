@@ -42,7 +42,7 @@ const projectData = [
     id: 5,
     title: 'Form Automation & Dashboard',
     image: pdfAutoImg,
-    link: '${base}public/PDF_Files/PHQ9_Survey.pdf' ,
+    link: `${base}PDF_Files/PHQ9_Survey.pdf` ,
     description: 'Built an automated scoring system for the PHQ-9 clinical assessment form using Acrobat JavaScript and SDK scripting. (Open in Adobe Acrobat for full functionality.)'
     }, 
     

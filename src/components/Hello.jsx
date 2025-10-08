@@ -103,8 +103,8 @@ export default function Hello() {
               </Stack>
                <Box sx={{ '& button': { m: 1 } }}>
                    <Button  
-                    href="public/PDF_Files/resume.pdf" target="_blank"
-                   variant="contained" color='success' endIcon={<DownloadIcon />}>
+                     href={`${import.meta.env.BASE_URL}PDF_Files/resume.pdf`} target="_blank"
+                     variant="contained" color='success' endIcon={<DownloadIcon />}>
                    Download Resume
                 </Button>
                 </Box>
