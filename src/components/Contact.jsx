@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -6,8 +6,13 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { alpha } from '@mui/material/styles';
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
 
 export default function Contact() {
+
+  const [status, setStatus] = useState(null);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const contactData = new FormData(event.target)
@@ -17,17 +22,28 @@ export default function Contact() {
     const object = Object.fromEntries(contactData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      console.log("Success", res);
+      if (res.success) {
+        setStatus("success");
+        setTimeout( () => setStatus(null), 3000)
+
+      } else {
+        setStatus("error");
+        setTimeout( () => setStatus(null), 3000)
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setStatus("error");
+      setTimeout( () => setStatus(null), 3000)
     }
   };
 
@@ -41,6 +57,17 @@ export default function Contact() {
         Contact Me
       </Typography>
 
+      {/* Show alert if successful */}
+        {status && (
+        <Alert
+          icon={<CheckIcon fontSize="inherit" />}
+          severity="success"
+          sx={{ mb: 2 }}
+        >
+          Your email was sent successfully!
+        </Alert>
+      )}
+
       <Card
       sx={(theme) => ({
         height: '100%',
@@ -48,28 +75,22 @@ export default function Contact() {
         flexDirection: 'column',
         borderRadius: 4,
          
-                
         // Theme-aware surface
         backgroundColor: alpha(theme.palette.background.paper, 0.95),
         border: `1px solid ${alpha(theme.palette.divider, 0.6)}`,
 
-      // Hover
-        transition: 'transform .3s, box-shadow .3s, border-color .3s',
-      '&:hover': {
+        // Hover
+        transition: 'transform .3s, box-shadow .3s, border-color .3s', '&:hover': {
         transform: 'translateY(-6px)',
         boxShadow: 6,
         borderColor: alpha(theme.palette.primary.main, 0.35),
       },
       })}
 
-
-
-  
       >
         <CardContent>
           <Box
             component="form"
-            noValidate
             autoComplete="off"
             onSubmit={onSubmit}
             sx={{
