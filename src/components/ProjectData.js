@@ -31,18 +31,12 @@ const projectData = [
     }, 
     {
     id: 5,
-    title: 'proj3',
-    image: '/images.proj3.jpg',
-    link: 'https:/link',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolore dolorum, excepturi reiciendis accusantium, maiores id quaerat quas amet modi et eveniet explicabo '
+    title: 'Form Automation & Dashboard',
+    image: 'src/components/images/projectImgs/PdfAutomation.png',
+    link: 'src/components/PDF_Files/PHQ9_Survey.pdf' ,
+    description: 'Built an automated scoring system for the PHQ-9 clinical assessment form using Acrobat JavaScript and SDK scripting. (Open in Adobe Acrobat for full functionality.)'
     }, 
-    {
-    id: 6,
-    title: 'proj3',
-    image: '/images.proj3.jpg',
-    link: 'https:/link',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolore dolorum, excepturi reiciendis accusantium, maiores id quaerat quas amet modi et eveniet explicabo '
-    }, 
+    
     
 ]
 
