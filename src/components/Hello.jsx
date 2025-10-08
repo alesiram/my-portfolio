@@ -102,7 +102,9 @@ export default function Hello() {
                 </IconButton>
               </Stack>
                <Box sx={{ '& button': { m: 1 } }}>
-                   <Button  variant="contained" color='success' endIcon={<DownloadIcon />}>
+                   <Button  
+                    href="src/components/Resume/MV T2.pdf" target='_blank'
+                   variant="contained" color='success' endIcon={<DownloadIcon />}>
                    Download Resume
                 </Button>
                 </Box>
