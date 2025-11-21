@@ -98,7 +98,7 @@ export default function Hello() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <LinkedInIcon sx={{ fontSize: 49, color: 'white' }} />
+                  <LinkedInIcon sx={{ fontSize: 48, color: 'white' }} />
                 </IconButton>
               </Stack>
                <Box sx={{ '& button': { m: 1 } }}>
