@@ -19,7 +19,7 @@ const projectData = [
     },
     {
     id: 2,
-    title: 'Workout Tracker',
+    title: 'WorkoutTracker',
     image: WorkOutTracker,
     link: `https://easy-workout-tracker.netlify.app/` ,
     description: 'A full-stack MERN fitness tracker with real-time analytics, including total workouts, reps, and max weight. Built a modern, responsive React UI with Material-UI and designed a REST API using Node.js + Express, connected to MongoDB Atlas for cloud data storage. The frontend is deployed on Netlify and the backend on Render'
