@@ -19,11 +19,11 @@ const projectData = [
     },
     {
     id: 2,
-    title: "Langton's Ant",
-    image: langtonImg,
-    link: 'https://github.com/alesiram/161-Final-Project-LangtonAnt',
-    description: 'A grid-based simulation of Langton’s Ant using OOP, with customizable board size, steps, and ant position.'
-    },
+    title: 'Workout Tracker',
+    image: WorkOutTracker,
+    link: `https://easy-workout-tracker.netlify.app/` ,
+    description: 'A full-stack MERN fitness tracker with real-time analytics, including total workouts, reps, and max weight. Built a modern, responsive React UI with Material-UI and designed a REST API using Node.js + Express, connected to MongoDB Atlas for cloud data storage. The frontend is deployed on Netlify and the backend on Render'
+    }, 
     {
     id: 3,
     title: 'Hasami Shogi Game ',
@@ -45,7 +45,13 @@ const projectData = [
     link: `${base}PDF_Files/PHQ9_Survey.pdf` ,
     description: 'Built an automated scoring system for the PHQ-9 clinical assessment form using Acrobat JavaScript and SDK scripting. (Open in Adobe Acrobat for full functionality.)'
     }, 
-    
+    {
+    id: 6,
+    title: "Langton's Ant",
+    image: langtonImg,
+    link: 'https://github.com/alesiram/161-Final-Project-LangtonAnt',
+    description: 'A grid-based simulation of Langton’s Ant using OOP, with customizable board size, steps, and ant position.'
+    },
     
 ]
 
