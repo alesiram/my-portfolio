@@ -6,6 +6,8 @@ import langtonImg from './images/projectImgs/langtonAnt.png';
 import hasamiImg  from './images/projectImgs/HasamiShogiGame.png';
 import spmImg     from './images/projectImgs/StringPrimMac.png';
 import pdfAutoImg from './images/projectImgs/PdfAutomation.png';
+import workoutImg from './images/projectImgs/WorkOutTracker.png';
+
 
 const base = import.meta.env.BASE_URL;
 
@@ -19,10 +21,10 @@ const projectData = [
     },
     {
     id: 2,
-    title: 'WorkoutTracker',
-    image: WorkOutTracker,
+    title: 'WorkOutTracker',
+    image: workoutImg,
     link: `https://easy-workout-tracker.netlify.app/` ,
-    description: 'A full-stack MERN fitness tracker with real-time analytics, including total workouts, reps, and max weight. Built a modern, responsive React UI with Material-UI and designed a REST API using Node.js + Express, connected to MongoDB Atlas for cloud data storage. The frontend is deployed on Netlify and the backend on Render'
+    description: 'A full-stack MERN fitness tracker with real-time analytics, including total workouts, reps, and max weight. Built a modern, responsive React UI with Material-UI and designed a REST API using Node.js + Express, connected to MongoDB Atlas for cloud data storage. The frontend is deployed on Netlify and the backend on Render.'
     }, 
     {
     id: 3,
